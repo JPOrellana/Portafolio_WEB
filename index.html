@@ -37,9 +37,9 @@
     .portfolio {
       padding: 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
       margin: auto;
     }
     .card {
@@ -48,9 +48,10 @@
       color: white;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       transition: transform 0.2s;
+      height: 200px;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -60,14 +61,15 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.1;
+      opacity: 0.3;
+      z-index: 1;
     }
     .card .content {
       position: relative;
-      padding: 2rem;
       z-index: 2;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: bold;
+      padding: 1.5rem;
     }
     a {
       color: inherit;
@@ -80,9 +82,9 @@
     <img class="avatar" src="img/Avatar.png" alt="José Pablo Orellana" />
     <div class="name">JOSÉ PABLO ORELLANA ORELLANA</div>
     <div class="icons">
-      <a href="docs/cv.pdf" target="_blank">📄</a>
-      <a href="mailto:jporellana2002@gmail.com">✉️</a>
-      <a href="https://www.linkedin.com/in/jos%C3%A9-pablo-orellana-618a84292/" target="_blank">🔗</a>
+      <a href="resume.pdf" target="_blank">📄</a>
+      <a href="mailto:correo@example.com">✉️</a>
+      <a href="https://linkedin.com/in/usuario" target="_blank">🔗</a>
     </div>
   </div>
 
@@ -90,21 +92,21 @@
     <a href="/calculator.html">
       <div class="card">
         <img class="bg" src="images/Calculator.png" alt="Calculator" />
-        <div class="content">Calculadora</div>
+        <div class="content">Calculator in React</div>
       </div>
     </a>
 
     <a href="/memory-game.html">
       <div class="card">
         <img class="bg" src="images/memory.png" alt="Memory Game" />
-        <div class="content">Juego de Memoria</div>
+        <div class="content">Memory Game</div>
       </div>
     </a>
 
     <a href="/liga-tracker.html">
       <div class="card">
         <img class="bg" src="images/laliga.png" alt="Backend" />
-        <div class="content">Tracker de La Liga</div>
+        <div class="content">La Liga Tracker Backend</div>
       </div>
     </a>
 
@@ -115,10 +117,17 @@
       </div>
     </a>
 
-    <a href="/historia.html">
+    <a href="/historieta.html">
       <div class="card">
         <img class="bg" src="images/historia.png" alt="QR App" />
         <div class="content">Historieta</div>
+      </div>
+    </a>
+
+    <a href="/otroproyecto.html">
+      <div class="card">
+        <img class="bg" src="images/mas.png" alt="More Projects" />
+        <div class="content">More Projects</div>
       </div>
     </a>
   </div>
