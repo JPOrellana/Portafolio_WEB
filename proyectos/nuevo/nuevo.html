@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto POS Virtual</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #111;
+      color: #f2f2f2;
+      padding: 2rem;
+    }
+    h1 {
+      color: #ff6600;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+      color: #ffa94d;
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Proyecto POS Virtual</h1>
+  <section>
+    <h2>Objetivo</h2>
+    <p>Desarrollar una aplicación web para punto de venta (POS) virtual, dirigida a pequeños y medianos negocios, permitiendo procesar pagos mediante tarjetas con tecnología NFC o a través de transferencias bancarias vía código QR.</p>
+
+    <h2>Características Principales</h2>
+    <ul>
+      <li>Interfaz amigable y adaptable a dispositivos móviles.</li>
+      <li>Autenticación de usuarios con roles (admin, vendedor).</li>
+      <li>Registro de ventas y generación de tickets digitales.</li>
+      <li>Integración con pagos NFC (tarjetas de débito/crédito).</li>
+      <li>Generación automática de código QR con datos del negocio para recibir transferencias.</li>
+      <li>Historial de transacciones por cliente o por fecha.</li>
+    </ul>
+
+    <h2>Tecnologías a Usar</h2>
+    <ul>
+      <li>Frontend: React + TailwindCSS</li>
+      <li>Backend: Node.js + Express</li>
+      <li>Base de datos: MongoDB</li>
+      <li>Autenticación: JWT</li>
+      <li>API externa de bancos para validación de transferencias</li>
+    </ul>
+
+    <h2>Futuras mejoras</h2>
+    <ul>
+      <li>Implementación de facturación electrónica integrada.</li>
+      <li>Soporte para varios dispositivos por usuario.</li>
+      <li>Módulo de inventario sincronizado.</li>
+      <li>Soporte offline y sincronización automática.</li>
+    </ul>
+
+    <h2>Estado actual</h2>
+    <p>En fase de planificación y validación de APIs bancarias disponibles. Se están definiendo los flujos principales y evaluando compatibilidad con dispositivos para NFC.</p>
+  </section>
+</body>
+</html>
