@@ -1,0 +1,145 @@
+openapi: 3.0.0
+info:
+  title: La Liga Tracker API
+  version: "1.0"
+  description: API REST para gestionar partidos de La Liga Española
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /api/matches:
+    get:
+      summary: Obtener todos los partidos
+      responses:
+        '200':
+          description: Lista de partidos
+    post:
+      summary: Crear un nuevo partido
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Match'
+      responses:
+        '200':
+          description: Partido creado
+
+  /api/matches/{id}:
+    get:
+      summary: Obtener partido por ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Partido encontrado
+        '404':
+          description: Partido no encontrado
+    put:
+      summary: Actualizar un partido
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Match'
+      responses:
+        '200':
+          description: Partido actualizado
+    delete:
+      summary: Eliminar un partido
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Partido eliminado
+
+  /api/matches/{id}/goals:
+    patch:
+      summary: Sumar un gol
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Gol registrado
+
+  /api/matches/{id}/yellowcards:
+    patch:
+      summary: Sumar una tarjeta amarilla
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Tarjeta amarilla registrada
+
+  /api/matches/{id}/redcards:
+    patch:
+      summary: Sumar una tarjeta roja
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Tarjeta roja registrada
+
+  /api/matches/{id}/extratime:
+    patch:
+      summary: Registrar tiempo extra
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Tiempo extra establecido
+
+components:
+  schemas:
+    Match:
+      type: object
+      properties:
+        id:
+          type: integer
+        homeTeam:
+          type: string
+        awayTeam:
+          type: string
+        matchDate:
+          type: string
+          format: date
+        goals:
+          type: integer
+        yellowCards:
+          type: integer
+        redCards:
+          type: integer
+        hasExtraTime:
+          type: boolean

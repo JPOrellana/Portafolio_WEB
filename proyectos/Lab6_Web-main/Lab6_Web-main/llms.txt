@@ -1,0 +1,68 @@
+La API "La Liga Tracker" permite gestionar partidos de fútbol mediante una interfaz REST. A continuación se muestran ejemplos de uso para cada endpoint clave:
+
+========================================
+Obtener todos los partidos:
+GET http://localhost:8080/api/matches
+
+========================================
+Obtener un partido por ID:
+GET http://localhost:8080/api/matches/{id}
+
+Ejemplo:
+GET http://localhost:8080/api/matches/1
+
+========================================
+Crear un nuevo partido:
+POST http://localhost:8080/api/matches
+
+Body (JSON):
+{
+  "homeTeam": "Real Madrid",
+  "awayTeam": "Valencia",
+  "matchDate": "2025-04-03"
+}
+
+========================================
+Actualizar un partido:
+PUT http://localhost:8080/api/matches/{id}
+
+Body (JSON):
+{
+  "homeTeam": "Barcelona",
+  "awayTeam": "Atletico",
+  "matchDate": "2025-04-05"
+}
+
+========================================
+Eliminar un partido:
+DELETE http://localhost:8080/api/matches/{id}
+
+========================================
+PATCH - Registrar Gol:
+PATCH http://localhost:8080/api/matches/{id}/goals
+
+========================================
+PATCH - Registrar Tarjeta Amarilla:
+PATCH http://localhost:8080/api/matches/{id}/yellowcards
+
+========================================
+PATCH - Registrar Tarjeta Roja:
+PATCH http://localhost:8080/api/matches/{id}/redcards
+
+========================================
+PATCH - Establecer Tiempo Extra:
+PATCH http://localhost:8080/api/matches/{id}/extratime
+
+========================================
+Todos los endpoints devuelven un objeto "Match" con esta estructura:
+
+{
+  "id": 1,
+  "homeTeam": "Real Madrid",
+  "awayTeam": "Valencia",
+  "matchDate": "2025-04-03",
+  "goals": 1,
+  "yellowCards": 0,
+  "redCards": 0,
+  "hasExtraTime": true
+}

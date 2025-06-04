@@ -1,0 +1,78 @@
+# --- SISTEMA OPERATIVO ---
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# --- NODE.JS / JAVASCRIPT ---
+
+# Dependencias
+node_modules/
+
+# Producción
+dist/
+build/
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Archivos temporales de lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Archivos de pruebas
+coverage/
+
+# Archivos generados por bundlers o transpiladores
+*.tsbuildinfo
+.cache/
+.next/
+out/
+.vite/
+
+# Archivos de configuración de entorno
+.env
+.env.local
+.env.*.local
+
+# --- EDITORES Y CONFIGURACIÓN DE PROYECTO ---
+
+# VSCode
+.vscode/
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# --- DOCUMENTACIÓN ---
+
+# Archivos temporales de markdown
+*.log
+*.markdown~
+*.md~
+
+# --- MISCELÁNEOS ---
+
+# Archivos de sistema de control de versiones
+*.swp
+*.swo
+
+# Otros artefactos temporales
+*.bak
+*.tmp
+*.temp
+
+
