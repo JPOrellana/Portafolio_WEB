@@ -8,13 +8,17 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #ffffff;
+      background: #b3b5b6;
       color: #111;
     }
-    .header {
+
+    header {
+      background-color: #ffffff;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ddd;
     }
+
     .avatar {
       border-radius: 50%;
       margin-bottom: 1rem;
@@ -22,26 +26,34 @@
       width: auto;
       max-width: 180px;
     }
+
     .name {
       font-size: 1.8rem;
       font-weight: bold;
     }
+
     .icons {
       margin-top: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
+
     .icons a {
       margin: 0 0.5rem;
       text-decoration: none;
     }
-    .portfolio {
+
+    main {
       padding: 2rem;
+    }
+
+    .portfolio {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       max-width: 1400px;
       margin: auto;
     }
+
     .card {
       position: relative;
       background: #111;
@@ -53,9 +65,11 @@
       transition: transform 0.2s;
       height: 200px;
     }
+
     .card:hover {
       transform: translateY(-5px);
     }
+
     .card img.bg {
       position: absolute;
       width: 100%;
@@ -64,6 +78,7 @@
       opacity: 0.3;
       z-index: 1;
     }
+
     .card .content {
       position: relative;
       z-index: 2;
@@ -71,6 +86,16 @@
       font-weight: bold;
       padding: 1.5rem;
     }
+
+    footer {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -78,7 +103,8 @@
   </style>
 </head>
 <body>
-  <div class="header">
+
+  <header>
     <img class="avatar" src="img/Avatar.png" alt="José Pablo Orellana" />
     <div class="name">JOSÉ PABLO ORELLANA ORELLANA</div>
     <div class="icons">
@@ -86,50 +112,57 @@
       <a href="mailto:jporellana2002@gmail.com">✉️</a>
       <a href="https://www.linkedin.com/in/jos%C3%A9-pablo-orellana-618a84292/" target="_blank">🔗</a>
     </div>
-  </div>
+  </header>
 
-  <div class="portfolio">
-    <a href="https://animated-lamington-41ab67.netlify.app/" target="_blank">
-      <div class="card">
-        <img class="bg" src="images/Calculator.png" alt="Calculator" />
-        <div class="content">Calculadora con React</div>
-      </div>
-    </a>
+  <main>
+    <div class="portfolio">
+      <a href="https://animated-lamington-41ab67.netlify.app/" target="_blank">
+        <div class="card">
+          <img class="bg" src="images/Calculator.png" alt="Calculator" />
+          <div class="content">Calculadora con React</div>
+        </div>
+      </a>
 
-    <a href="proyectos/Lab6_Web_React-main/Lab6_Web_React-main/memory-game.html">
-      <div class="card">
-        <img class="bg" src="images/memory.png" alt="Memory Game" />
-        <div class="content">Juego de Memoria</div>
-      </div>
-    </a>
+      <a href="proyectos/Lab6_Web_React-main/Lab6_Web_React-main/memory-game.html">
+        <div class="card">
+          <img class="bg" src="images/memory.png" alt="Memory Game" />
+          <div class="content">Juego de Memoria</div>
+        </div>
+      </a>
 
-    <a href="proyectos/Lab6_Web-main/Lab6_Web-main/LaLigaTracker.html">
-      <div class="card">
-        <img class="bg" src="images/laliga.png" alt="Backend" />
-        <div class="content">Tracker de La Liga</div>
-      </div>
-    </a>
+      <a href="proyectos/Lab6_Web-main/Lab6_Web-main/LaLigaTracker.html">
+        <div class="card">
+          <img class="bg" src="images/laliga.png" alt="Backend" />
+          <div class="content">Tracker de La Liga</div>
+        </div>
+      </a>
 
-    <a href="proyectos/Lab5_Web-main/Lab5_Web-main/index.html">
-      <div class="card">
-        <img class="bg" src="images/chat.png" alt="Payments App" />
-        <div class="content">Chat</div>
-      </div>
-    </a>
+      <a href="proyectos/Lab5_Web-main/Lab5_Web-main/index.html">
+        <div class="card">
+          <img class="bg" src="images/chat.png" alt="Payments App" />
+          <div class="content">Chat</div>
+        </div>
+      </a>
 
-    <a href="proyectos/Lab3Web/index.html">
-      <div class="card">
-        <img class="bg" src="images/historia.png" alt="QR App" />
-        <div class="content">Historieta</div>
-      </div>
-    </a>
+      <a href="proyectos/Lab3Web/index.html">
+        <div class="card">
+          <img class="bg" src="images/historia.png" alt="QR App" />
+          <div class="content">Historieta</div>
+        </div>
+      </a>
 
-    <a href="proyectos/nuevo/nuevo.html">
-      <div class="card">
-        <img class="bg" src="images/mas.png" alt="More Projects" />
-        <div class="content">Futuros Proyectos</div>
-      </div>
-    </a>
-  </div>
+      <a href="proyectos/nuevo/nuevo.html">
+        <div class="card">
+          <img class="bg" src="images/mas.png" alt="More Projects" />
+          <div class="content">Futuros Proyectos</div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 José Pablo Orellana. Todos los derechos reservados. | Desarrollado con HTML & CSS.
+  </footer>
+
 </body>
 </html>
