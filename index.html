@@ -13,26 +13,41 @@
     }
 
     header {
-      background-color: #ffffff;
-      text-align: center;
-      padding: 2rem 1rem;
+      background: url('images/header.gif') center center / cover no-repeat;
+      padding: 3rem 1rem;
       border-bottom: 1px solid #ddd;
+      color: white;
+      text-align: center;
+      position: relative;
     }
 
-    .avatar {
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      aspect-ratio: 1 / 1;
-      width: auto;
-      max-width: 180px;
+    .header-logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 80px;
+      height: auto;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
     }
 
     .name {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       font-weight: bold;
     }
 
     .icons {
+      text-align: center;
       margin-top: 0.5rem;
       font-size: 1.4rem;
     }
@@ -40,6 +55,7 @@
     .icons a {
       margin: 0 0.5rem;
       text-decoration: none;
+      color: white;
     }
 
     main {
@@ -87,6 +103,48 @@
       padding: 1.5rem;
     }
 
+    .experience-section {
+      background: #fff;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .experience-entry img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .experience-entry .details {
+      flex: 1;
+    }
+
+    .experience-entry .details h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .experience-entry .details p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #ccc;
+      margin: 2rem 0;
+    }
+
     footer {
       background-color: #ffffff;
       text-align: center;
@@ -105,63 +163,104 @@
 <body>
 
   <header>
-    <img class="avatar" src="img/Avatar.png" alt="José Pablo Orellana" />
+    <img class="header-logo" src="images/logo.png" alt="Logo personal" />
     <div class="name">JOSÉ PABLO ORELLANA ORELLANA</div>
     <div class="icons">
       <a href="docs/cv.pdf" target="_blank">📄</a>
       <a href="mailto:jporellana2002@gmail.com">✉️</a>
       <a href="https://www.linkedin.com/in/jos%C3%A9-pablo-orellana-618a84292/" target="_blank">🔗</a>
     </div>
+    <nav>
+      <a href="#projects">Proyectos</a>
+      <a href="#about">Sobre mí</a>
+    </nav>
   </header>
 
   <main>
-    <div class="portfolio">
-      <a href="https://animated-lamington-41ab67.netlify.app/" target="_blank">
-        <div class="card">
-          <img class="bg" src="images/Calculator.png" alt="Calculator" />
-          <div class="content">Calculadora con React</div>
-        </div>
-      </a>
+    <section id="projects">
+      <div class="portfolio">
+        <a href="https://animated-lamington-41ab67.netlify.app/" target="_blank">
+          <div class="card">
+            <img class="bg" src="images/Calculator.png" alt="Calculator" />
+            <div class="content">Calculadora con React</div>
+          </div>
+        </a>
 
-      <a href="proyectos/Lab6_Web_React-main/Lab6_Web_React-main/memory-game.html">
-        <div class="card">
-          <img class="bg" src="images/memory.png" alt="Memory Game" />
-          <div class="content">Juego de Memoria</div>
-        </div>
-      </a>
+        <a href="proyectos/Lab6_Web_React-main/Lab6_Web_React-main/memory-game.html">
+          <div class="card">
+            <img class="bg" src="images/memory.png" alt="Memory Game" />
+            <div class="content">Juego de Memoria</div>
+          </div>
+        </a>
 
-      <a href="proyectos/Lab6_Web-main/Lab6_Web-main/LaLigaTracker.html">
-        <div class="card">
-          <img class="bg" src="images/laliga.png" alt="Backend" />
-          <div class="content">Tracker de La Liga</div>
-        </div>
-      </a>
+        <a href="proyectos/Lab6_Web-main/Lab6_Web-main/LaLigaTracker.html">
+          <div class="card">
+            <img class="bg" src="images/laliga.png" alt="Backend" />
+            <div class="content">Tracker de La Liga</div>
+          </div>
+        </a>
 
-      <a href="proyectos/Lab5_Web-main/Lab5_Web-main/index.html">
-        <div class="card">
-          <img class="bg" src="images/chat.png" alt="Payments App" />
-          <div class="content">Chat</div>
-        </div>
-      </a>
+        <a href="proyectos/Lab5_Web-main/Lab5_Web-main/index.html">
+          <div class="card">
+            <img class="bg" src="images/chat.png" alt="Payments App" />
+            <div class="content">Chat</div>
+          </div>
+        </a>
 
-      <a href="proyectos/Lab3Web/index.html">
-        <div class="card">
-          <img class="bg" src="images/historia.png" alt="QR App" />
-          <div class="content">Historieta</div>
-        </div>
-      </a>
+        <a href="proyectos/Lab3Web/index.html">
+          <div class="card">
+            <img class="bg" src="images/historia.png" alt="QR App" />
+            <div class="content">Historieta</div>
+          </div>
+        </a>
 
-      <a href="proyectos/nuevo/nuevo.html">
-        <div class="card">
-          <img class="bg" src="images/mas.png" alt="More Projects" />
-          <div class="content">Futuros Proyectos</div>
+        <a href="proyectos/nuevo/nuevo.html">
+          <div class="card">
+            <img class="bg" src="images/mas.png" alt="More Projects" />
+            <div class="content">Futuros Proyectos</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="about" class="experience-section">
+      <h2>Sobre mí</h2>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="img/Avatar.png" alt="Avatar" style="width: 100px; border-radius: 50%;" />
+        <p>Soy una persona entusiasta, apasionada por la tecnología y con deseos constantes de aprender y superarme. He trabajado en diversos proyectos relacionados con el desarrollo web y me interesa seguir creciendo en el área de calidad de software (QA) y gestión de productos (Product Owner).</p>
+      </div>
+
+      <div class="divider"></div>
+      <h2>Mi experiencia</h2>
+      <div class="experience-entry">
+        <img src="images/uvg.png" alt="UVG logo" />
+        <div class="details">
+          <h3>Auxiliar catedrático</h3>
+          <p>Universidad del Valle de Guatemala · Jornada parcial</p>
+          <p>ene. 2024 - jun. 2024 · 6 meses · Guatemala (Híbrido)</p>
+          <p>- Introducción a Ingeniería en Ciencias de la Computación</p>
+          <p>- Algoritmos y Estructura de Datos</p>
         </div>
-      </a>
-    </div>
+      </div>
+
+      <div class="experience-entry">
+        <img src="images/bi.png" alt="Banco Industrial logo" />
+        <div class="details">
+          <h3>Analista QA especializado</h3>
+          <p>Banco Industrial Guatemala · Jornada completa</p>
+          <p>ene. 2025 - actualidad · Guatemala (Híbrido)</p>
+          <p>Resolución colaborativa de problemas, AS400 y validación de calidad de software.</p>
+          <h3>Analista QA</h3>
+          <p>jun. 2024 - ene. 2025 · Guatemala</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    © 2025 José Pablo Orellana. Todos los derechos reservados. | Desarrollado con HTML & CSS.
+    © 2025 José Pablo Orellana. Todos los derechos reservados. | Universidad del Valle de Guatemala
   </footer>
 
 </body>
